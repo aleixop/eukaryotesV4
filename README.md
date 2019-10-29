@@ -1,4 +1,4 @@
-# *eukaryotesV4*
+# *eukaryotesV4* database
 
 [![DOI](https://zenodo.org/badge/198411321.svg)](https://zenodo.org/badge/latestdoi/198411321)
 
