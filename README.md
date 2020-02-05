@@ -22,6 +22,7 @@ and correct problematic cases (i.e. distant references sequences retrieving the 
   - OTU<sub>97</sub> level (Operational Taxonomic Units of sequences clustered at 97% similarity)
   - Taxonomic group (in general a formal Class)
   - Supergroup
+
 The largest effort was the classification at the taxonomic group level, 
 which comprised 136 groups (see following section). The final eukaryotesV4 database contains 25,849 sequences, 43% of which derive from environmental datasets.
 
