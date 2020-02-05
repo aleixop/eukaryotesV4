@@ -10,12 +10,19 @@
 The database was first built using 97% clustered V4 sequences from previous environmental high-throughput sequencing (HTS) studies in European coastal systems: 
 Blanes Bay Microbial Observatory ([Giner et al., 2019](https://onlinelibrary.wiley.com/doi/full/10.1111/mec.14929)) and BioMarKs project ([Massana et al., 2015](https://sfamjournals.onlinelibrary.wiley.com/doi/full/10.1111/1462-2920.12955)), 
 and the water column of the global ocean sampled during the 
-Malaspina cruise ([Giner et al., 2020](https://www.nature.com/articles/s41396-019-0506-9)). Then, the database was complemented with trimmed 97% clustered V4 sequences from SILVA SSU 128 ([Quast et al., 2013](https://academic.oup.com/nar/article/41/D1/D590/1069277)) that 
+Malaspina cruise ([Giner et al., 2020](https://www.nature.com/articles/s41396-019-0506-9)). 
+
+Then, the database was complemented with trimmed 97% clustered V4 sequences from SILVA SSU 128 ([Quast et al., 2013](https://academic.oup.com/nar/article/41/D1/D590/1069277)) that 
 were not found in environmental HTS datasets. This trimming was performed using cutadapt v1.16 ([Martin, 2011](https://journal.embnet.org/index.php/embnetjournal/article/view/200/479)) with the universal eukaryotic forward primer from [Stoeck et al. (2010)](https://onlinelibrary.wiley.com/doi/full/10.1111/j.1365-294X.2009.04480.x) 
-and reverse primer from [Balzano et al. (2015)](http://www.int-res.com/abstracts/ame/v74/n3/p263-277/), with an error rate of 0.2. All sequences were manually curated to discard possible chimeras and were classified 
+and reverse primer from [Balzano et al. (2015)](http://www.int-res.com/abstracts/ame/v74/n3/p263-277/), with an error rate of 0.2. 
+
+All sequences were manually curated to discard possible chimeras and were classified 
 at three taxonomic levels based on previous data, exhaustive inspection in multiple phylogenetic trees and iterative testing with environmental datasets to detect 
-and correct problematic cases (i.e. distant references sequences retrieving the same mTag). These three levels were: (i) OTU<sub>97</sub> level (Operational Taxonomic Units of 
-sequences clustered at 97% similarity), (ii) taxonomic group (in general a formal Class), and (iii) supergroup. The largest effort was the classification at the taxonomic group level, 
+and correct problematic cases (i.e. distant references sequences retrieving the same mTag). These three levels were: 
+  - OTU<sub>97</sub> level (Operational Taxonomic Units of sequences clustered at 97% similarity)
+  - Taxonomic group (in general a formal Class)
+  - Supergroup
+The largest effort was the classification at the taxonomic group level, 
 which comprised 136 groups (see following section). The final eukaryotesV4 database contains 25,849 sequences, 43% of which derive from environmental datasets.
 
 ## Overview of the database
