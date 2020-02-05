@@ -2,7 +2,14 @@
 
 [![DOI](https://zenodo.org/badge/198411321.svg)](https://zenodo.org/badge/latestdoi/198411321)
 
-*eukaryotesV4* is a curated database of V4 region of 18S rDNA. It was built to extract and taxonomically classify short metagenomic reads (mTags). You can download it in [fasta](db/eukaryotesV4_v1.fasta) format or [.txt file](db/eukaryotesV4_tax_v1.txt
+*eukaryotesV4* is a curated database of V4 region of 18S rDNA. It was built to extract and taxonomically classify short metagenomic reads (mTags) and is included in:
+
+--------
+**Obiol A., Giner C.R., Sánchez P., Duarte C.M., Acinas S.G., Massana R.** (2020). *A metagenomic assessment of microbial eukaryotic diversity in the global ocean*. Submitted to Mol. Ecol. Resour.
+
+--------
+
+You can download it in [fasta](db/eukaryotesV4_v1.fasta) format or [.txt file](db/eukaryotesV4_tax_v1.txt
 ) with additional information.
 
 ## How was the database built?
