@@ -2,15 +2,32 @@
 
 [![DOI](https://zenodo.org/badge/198411321.svg)](https://zenodo.org/badge/latestdoi/198411321)
 
-*eukaryotesV4* is a curated database of V4 region of 18S rDNA. It was built to extract and taxonomically classify short metagenomic reads (mTags) and is included in:
+*eukaryotesV4* is a curated database of V4 region of 18S rDNA. It was built to extract and taxonomically classify short metagenomic reads (mTags). 
+You can download it in [fasta](db/eukaryotesV4_v2.fasta) format or [.txt file](db/eukaryotesV4_tax_v2.txt) with additional information.
+
+## Citation
 
 --------
 Obiol, A., Giner, C.R., Sánchez, P., Duarte, C.M., Acinas, S.G. and Massana, R. [A metagenomic assessment of microbial eukaryotic diversity in the global ocean](https://doi.org/10.1111/1755-0998.13147). *Mol Ecol Resour*. 2020; 20: 718– 731. doi: 10.1111/1755-0998.13147
 
 --------
 
-You can download it in [fasta](db/eukaryotesV4_v1.fasta) format or [.txt file](db/eukaryotesV4_tax_v1.txt
-) with additional information.
+## Versions
+
+### v2
+
+4 sequences with errors removed:
+
+|Removed sequence                        |Error                               |
+|:---------------------------------------|:-----------------------------------|
+|`MPN7116_MAST-4_Stramenopiles`            |Missed 8 bases at position 60       |
+|`BMK21470_Dinoflagellata_Alveolata`       |Had 4 gaps that should not be there |
+|`MPN4866_Dinoflagellata_Alveolata`        |Misses 5-19 bases at position 220   |
+|`BMK14604_Dictyochophyceae_Stramenopiles` |Seems to be a chimera               |
+
+### v1
+
+First version, used in [*Mol Ecol Resour* paper](https://doi.org/10.1111/1755-0998.13147).
 
 ## How was the database built?
 
@@ -35,7 +52,7 @@ which comprised 136 groups (see following section). The final *eukaryotesV4* dat
 
 ## Overview of the database
 
-Here is a summary table with the taxonomic groups contained in *eukaryotesV4* database.
+Here is a summary table with the taxonomic groups contained in *eukaryotesV4* database v1.
 
 |Group                |Supergroup     | OTU<sub>97</sub> sequences| Median length (bp)|
 |:--------------------|:--------------|---------------:|------------------:|
