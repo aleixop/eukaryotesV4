@@ -19,10 +19,10 @@ Obiol, A., Giner, C.R., Sánchez, P., Duarte, C.M., Acinas, S.G. and Massana, R.
 |:---------------------------------------|:-----------------------------------|
 |`MPN7116_MAST-4_Stramenopiles`            |Missed 8 bases at position 60       |
 |`BMK21470_Dinoflagellata_Alveolata`       |Had 4 gaps that should not be there |
-|`MPN4866_Dinoflagellata_Alveolata`        |Misses 5-19 bases at position 220   |
-|`BMK14604_Dictyochophyceae_Stramenopiles` |Seems to be a chimera               |
-|`MPN6667_Telonemia_Eukaryota`             |Misses 6 bp at position 280         | 
-|`BMK17658_Cercozoa_Rhizaria`              |It has 6 gaps here and there        |
+|`MPN4866_Dinoflagellata_Alveolata`        |Missed 5-19 bases at position 220   |
+|`BMK14604_Dictyochophyceae_Stramenopiles` |Seemed to be a chimera               |
+|`MPN6667_Telonemia_Eukaryota`             |Missed 6 bp at position 280         | 
+|`BMK17658_Cercozoa_Rhizaria`              |It had 6 gaps here and there        |
 
 ### v1
 
