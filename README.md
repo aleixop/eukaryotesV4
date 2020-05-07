@@ -26,7 +26,7 @@ Obiol, A., Giner, C.R., Sánchez, P., Duarte, C.M., Acinas, S.G. and Massana, R.
 
 ### v1
 
-First version, used in [*Mol Ecol Resour* paper](https://doi.org/10.1111/1755-0998.13147).
+First version, used in *Mol Ecol Resour* [paper](https://doi.org/10.1111/1755-0998.13147).
 
 ## How was the database built?
 
