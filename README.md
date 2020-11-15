@@ -4,14 +4,18 @@
 
 *eukaryotesV4* is a curated database of V4 region of 18S rDNA. It was built to extract and taxonomically classify short metagenomic reads (mTags).  
 
-You can download it in [fasta](db/eukaryotesV4_v3.fasta) format or [.txt file](db/eukaryotesV4_tax_v3.txt) with additional information.
-A version with headers formatted to work with `dada2` is also available [here](db/eukaryotesV4_v3_dada2.fasta).
+You can download it in [fasta](db/eukaryotesV4_v4.fasta) format or [.txt file](db/eukaryotesV4_tax_v4.txt) with additional information.
+A version with headers formatted to work with `dada2` is also available [here](db/eukaryotesV4_v4_dada2.fasta).
 
 ## Citation
 
 Obiol, A., Giner, C.R., Sánchez, P., Duarte, C.M., Acinas, S.G. and Massana, R. [A metagenomic assessment of microbial eukaryotic diversity in the global ocean](https://doi.org/10.1111/1755-0998.13147). *Mol Ecol Resour*. 2020; 20: 718– 731. doi: 10.1111/1755-0998.13147
 
 ## Versions
+
+### v4
+
+Sequence `MPN5387` (Pyramimonadales) was misclassified as MALV-II. Corrected in this version.
 
 ### v3
 
@@ -72,7 +76,7 @@ Here is a summary table with the taxonomic groups contained in *eukaryotesV4* da
 |Ellobiopsidae        |Alveolata      |                          9|                363|
 |InSedAlveolata       |Alveolata      |                        138|                377|
 |MALV-I               |Alveolata      |                        605|                378|
-|MALV-II              |Alveolata      |                       2306|                378|
+|MALV-II              |Alveolata      |                       2305|                378|
 |MALV-III             |Alveolata      |                         82|                380|
 |MALV-IV              |Alveolata      |                         47|                381|
 |MALV-V               |Alveolata      |                         14|                376|
@@ -104,7 +108,7 @@ Here is a summary table with the taxonomic groups contained in *eukaryotesV4* da
 |Pedinophyceae        |Archaeplastida |                          7|                374|
 |Prasino-Clade-IX     |Archaeplastida |                          8|                372|
 |Pycnococcaceae       |Archaeplastida |                          3|                381|
-|Pyramimonadales      |Archaeplastida |                         44|                379|
+|Pyramimonadales      |Archaeplastida |                         45|                379|
 |Rhodophyta           |Archaeplastida |                        388|                378|
 |Trebouxiophyceae     |Archaeplastida |                         81|                380|
 |Ulvophyceae          |Archaeplastida |                         79|                378|
