@@ -136,7 +136,7 @@ Here is a summary table with the taxonomic groups contained in *eukaryotesV4* da
 |Discicristoidea      |Opisthokonta   |                         39|                380|
 |Filasterea           |Opisthokonta   |                          5|                381|
 |Ichthyosporea        |Opisthokonta   |                         47|                378|
-|InSedObazoa          |Opisthokonta   |                         67|                381|
+|InSedOpisthokonta    |Opisthokonta   |                         67|                381|
 |MarineOpisthokonts   |Opisthokonta   |                         27|                377|
 |Metazoa              |Opisthokonta   |                       7220|                394|
 |Ancyromonadida       |OtherEukaryota |                         39|                380|
