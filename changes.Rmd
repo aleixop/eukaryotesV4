@@ -69,13 +69,9 @@ write_tsv(eukv4_v3, 'db/old_versions/eukaryotesV4_tax_v3.txt')
 
 tax_to_fasta(eukv4_v3, 'db/old_versions/eukaryotesV4_v3.fasta')
 tax_to_fasta(eukv4_v3, dada = T, 'db/old_versions/eukaryotesV4_v3_dada2.fasta')
-
-## summary table
-
-summarizer(eukv4_v3)
 ```
 
-# version 3 to 4 (TO BE PUBLISHED)
+# version 3 to 4
 
 OTU MPN5387 was classified as MALV-II and it is in fact a Pyramimonadales.
 
@@ -94,5 +90,50 @@ tax_to_fasta(eukv4_v4, 'db/eukaryotesV4_v4.fasta')
 tax_to_fasta(eukv4_v4, dada = T, 'db/eukaryotesV4_v4_dada2.fasta')
 
 summarizer(eukv4_v4)
+```
+
+# version 4 to 4
+
+```{r}
+eukv4_v4 <- read_tsv('db/old_versions/eukaryotesV4_tax_v4.txt')
+
+name_changes <- 
+  c(Choanoflagellata = 'Choanomonada',
+    Colponema = 'Colponemida',
+    `X-Cell` = 'Perkinsidae',
+    Archamoebae = 'Archamoebea',
+    Fractovitelliida = 'Fractovitellida',
+    Schizoplasmodiida = 'Schizoplasmodiidae',
+    Charophyta = 'Streptophyta',
+    Glaucocystophyceae = 'Glaucophyta',
+    Nephroselmidophyceae = 'Nephroselmis',
+    Rhodophyta = 'Rhodophyceae',
+    Goniomonas = 'Cyathomonadacea',
+    Katablepharidae = 'Kathablepharidacea',
+    Kinetoplastida = 'Kinetoplastea',
+    Centrohelida = 'Centroplasthelida',
+    Pavlovophyceae = 'Pavlovales',
+    Discicristoidea = 'Rotosphaerida',
+    Acantharia = 'Acantharea',
+    Chlorarachniophyta = 'Chlorarachnea',
+    Bolidomonas = 'Bolidophyceae',
+    Developayella = 'Developea',
+    Diatomea = 'Diatomeae',
+    Olisthodiscus = 'Raphidophyceae',
+    Picophagea = 'Picophagus',
+    Pinguiochrysidales = 'Pinguiophyceae',
+    Pirsonia = 'Pirsoniales')
+
+eukv4_v5 <- 
+  eukv4_v4 %>% 
+  mutate(Group = case_when(Group %in% names(name_changes) ~ name_changes[Group],
+                           TRUE ~ Group),
+         Supergroup = if_else(Group == 'Picozoa','Archaeplastida',Supergroup))
+
+write_tsv(eukv4_v5, 'db/eukaryotesV4_tax_v5.txt')
+tax_to_fasta(eukv4_v5, 'db/eukaryotesV4_v5.fasta')
+tax_to_fasta(eukv4_v5, dada = T, 'db/eukaryotesV4_v5_dada2.fasta')
+
+summarizer(eukv4_v5)
 ```
 
