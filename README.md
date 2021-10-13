@@ -19,7 +19,7 @@ Taxonomy adjusted to [Adl et al (2019)](https://doi.org/10.1111/jeu.12691). Name
 
 |Old name             |Updated name       |
 |:--------------------|:------------------|
-|Choanoflagellata     |Choanomonada       |
+|Choanomonada         |Choanoflagellata   |
 |Colponema            |Colponemida        |
 |X-Cell               |Perkinsidae        |
 |Archamoebae          |Archamoebea        |
