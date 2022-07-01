@@ -92,7 +92,7 @@ tax_to_fasta(eukv4_v4, dada = T, 'db/eukaryotesV4_v4_dada2.fasta')
 summarizer(eukv4_v4)
 ```
 
-# version 4 to 4
+# version 4 to 5
 
 ```{r}
 eukv4_v4 <- read_tsv('db/old_versions/eukaryotesV4_tax_v4.txt')
