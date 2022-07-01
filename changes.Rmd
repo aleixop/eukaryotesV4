@@ -98,7 +98,7 @@ summarizer(eukv4_v4)
 eukv4_v4 <- read_tsv('db/old_versions/eukaryotesV4_tax_v4.txt')
 
 name_changes <- 
-  c(Choanoflagellata = 'Choanomonada',
+  c(Choanomonada = 'Choanoflagellata',
     Colponema = 'Colponemida',
     `X-Cell` = 'Perkinsidae',
     Archamoebae = 'Archamoebea',
