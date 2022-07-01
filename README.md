@@ -165,7 +165,7 @@ Here is a summary table with the taxonomic groups contained in *eukaryotesV4* da
 |Ascomycota          |Opisthokonta   |                        601|                379|
 |BasalFungi          |Opisthokonta   |                        704|                381|
 |Basidiomycota       |Opisthokonta   |                        416|                380|
-|Choanomonada        |Opisthokonta   |                        241|                378|
+|Choanoflagellata    |Opisthokonta   |                        241|                378|
 |Filasterea          |Opisthokonta   |                          5|                381|
 |Ichthyosporea       |Opisthokonta   |                         47|                378|
 |InSedOpisthokonta   |Opisthokonta   |                         67|                381|
