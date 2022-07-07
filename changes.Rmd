@@ -6,9 +6,10 @@ author: "Aleix Obiol"
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 library(tidyverse)
+library(DECIPHER)
 ```
 
-# Functions
+## Functions
 
 ```{r}
 tax_to_fasta <- function(tax, filename, dada = FALSE){
@@ -41,7 +42,7 @@ summarizer <- function(tax){
 } 
 ```
 
-# Version 2 to 3
+## Version 2 to 3
 
 ```{r}
 # version 2 to 3
@@ -71,7 +72,7 @@ tax_to_fasta(eukv4_v3, 'db/old_versions/eukaryotesV4_v3.fasta')
 tax_to_fasta(eukv4_v3, dada = T, 'db/old_versions/eukaryotesV4_v3_dada2.fasta')
 ```
 
-# version 3 to 4
+## version 3 to 4
 
 OTU MPN5387 was classified as MALV-II and it is in fact a Pyramimonadales.
 
@@ -92,7 +93,7 @@ tax_to_fasta(eukv4_v4, dada = T, 'db/eukaryotesV4_v4_dada2.fasta')
 summarizer(eukv4_v4)
 ```
 
-# version 4 to 5
+## version 4 to 5
 
 ```{r}
 eukv4_v4 <- read_tsv('db/old_versions/eukaryotesV4_tax_v4.txt')
@@ -135,5 +136,45 @@ tax_to_fasta(eukv4_v5, 'db/eukaryotesV4_v5.fasta')
 tax_to_fasta(eukv4_v5, dada = T, 'db/eukaryotesV4_v5_dada2.fasta')
 
 summarizer(eukv4_v5)
+```
+
+## version 5 to 6
+
+Change some taxonomic assignations.
+
+```{r}
+eukv4_v5 <- read_tsv('db/old_versions/eukaryotesV4_tax_v5.txt')
+
+changes_tax <- 
+  tibble::tribble(
+             ~OTU,             ~Group,      ~Supergroup,
+    "SLVAM901018",      "Nucleomorph", "OtherEukaryota",
+    "SLVJF791073",      "Nucleomorph", "OtherEukaryota",
+    "SLVJN546121",       "Ascomycota",   "Opisthokonta",
+      "SLVL37733",       "Ascomycota",   "Opisthokonta",
+    "SLVAB597203",       "BasalFungi",   "Opisthokonta",
+    "SLVAB597204",       "BasalFungi",   "Opisthokonta",
+        "BMK9285",   "Ancyromonadida", "OtherEukaryota",
+    "SLVAY743950",          "Metazoa",   "Opisthokonta",
+    "SLVKF211436",          "Metazoa",   "Opisthokonta",
+    "SLVKF651077",      "Colponemida",      "Alveolata",
+    "SLVDQ267705", "Picocystophyceae", "Archaeplastida",
+    "SLVFJ816018",    "Rotosphaerida",   "Opisthokonta",
+    "SLVAB085614",     "Schizocladia",  "Stramenopiles"
+    )
+
+changes_tax_to_add <- 
+  eukv4_v5 %>% 
+  filter(OTU %in% changes_tax$OTU) %>% 
+  select(-Group, -Supergroup) %>% 
+  left_join(changes_tax)
+
+eukv4_v6 <- 
+  eukv4_v5 %>% 
+  filter(!OTU %in% changes_tax$OTU) %>% 
+  bind_rows(changes_tax_to_add) %>% 
+  arrange(Supergroup, Group)
+
+
 ```
 
