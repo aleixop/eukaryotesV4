@@ -13,6 +13,69 @@ Obiol, A., Giner, C.R., Sánchez, P., Duarte, C.M., Acinas, S.G. and Massana, R.
 
 ## Versions
 
+### v7
+
+Changes in tax assignation, nomenclature. Additionaly, all U's in sequences changed to T's for consistency.
+
+#### Changes in Chrysophyceae
+
+|OTU         |New tax            |
+|:-----------|:------------------|
+|BMK7763     |InSedStramenopiles |
+|BMK5345     |InSedStramenopiles |
+|BMK5769     |InSedStramenopiles |
+|SLVKF443034 |Synchromophyceae   |
+|SLVAJ130893 |Synchromophyceae   |
+|SLVKF925343 |Synchromophyceae   |
+|SLVJN004145 |Synchromophyceae   |
+|SLVU73225   |Synurophyceae      |
+|BMK10049    |Synurophyceae      |
+|SLVJN991181 |Synurophyceae      |
+|SLVU73226   |Synurophyceae      |
+|SLVJX946340 |Synurophyceae      |
+|SLVU73219   |Synurophyceae      |
+|SLVU73231   |Synurophyceae      |
+|SLVGU935621 |Synurophyceae      |
+|SLVU73222   |Synurophyceae      |
+|SLVHF549063 |Synurophyceae      |
+|SLVGU935623 |Synurophyceae      |
+|SLVGU935633 |Synurophyceae      |
+|SLVEF165118 |Synurophyceae      |
+|SLVGU935624 |Synurophyceae      |
+|SLVGU935628 |Synurophyceae      |
+|SLVU73221   |Synurophyceae      |
+|SLVGU935622 |Synurophyceae      |
+|SLVJX946336 |Synurophyceae      |
+|SLVGU325513 |Synurophyceae      |
+|SLVHF549067 |Synurophyceae      |
+|SLVHF549064 |Synurophyceae      |
+|SLVGU325515 |Synurophyceae      |
+|SLVGU067831 |Synurophyceae      |
+|SLVAB749074 |Synurophyceae      |
+|SLVJX455151 |Synurophyceae      |
+|SLVAB622324 |Synurophyceae      |
+|SLVHF549070 |Synurophyceae      |
+|SLVKM590553 |Synurophyceae      |
+|SLVAY919713 |Synurophyceae      |
+|SLVAY919803 |Synurophyceae      |
+
+#### Changes in Cryptomonadales
+
+|OTU             |New tax     |
+|:---------------|:-----------|
+|SLVGAIN01011745 |Nucleomorph |
+|SLVAJ420694     |Nucleomorph |
+|SLVAJ420692     |Nucleomorph |
+|SLVHF952607     |Nucleomorph |
+|SLVAM901023     |Nucleomorph |
+
+#### Changes in taxonomic groups nomenclature
+
+|Old          |New       |
+|:------------|:---------|
+|Diatomeae    |Diatomea  |
+|Blastocystis |Opalinata |
+
 ### v6
 
 Changes in tax assignation for some misclassified references:
@@ -168,7 +231,7 @@ Here is a summary table with the taxonomic groups contained in *eukaryotesV4* da
 |Ulvophyceae         |Archaeplastida |                         79|                378|
 |Mantamonas          |CRuMS          |                          2|                385|
 |Rigifilida          |CRuMS          |                          6|                388|
-|Cryptomonadales     |Cryptista      |                        107|                376|
+|Cryptomonadales     |Cryptista      |                        102|                376|
 |Cyathomonadacea     |Cryptista      |                          4|                420|
 |Kathablepharidacea  |Cryptista      |                         21|                377|
 |Palpitomonas        |Cryptista      |                          1|                375|
@@ -198,7 +261,7 @@ Here is a summary table with the taxonomic groups contained in *eukaryotesV4* da
 |Breviatea           |OtherEukaryota |                         24|                380|
 |InSedEukaryota      |OtherEukaryota |                        324|                358|
 |Malawimonadidae     |OtherEukaryota |                          1|                386|
-|Nucleomorph         |OtherEukaryota |                         20|                394|
+|Nucleomorph         |OtherEukaryota |                         25|                388|
 |Telonemia           |OtherEukaryota |                         31|                375|
 |Acantharea          |Rhizaria       |                        434|                367|
 |Cercozoa            |Rhizaria       |                       1439|                390|
@@ -211,17 +274,16 @@ Here is a summary table with the taxonomic groups contained in *eukaryotesV4* da
 |RAD-C               |Rhizaria       |                         28|                378|
 |Aurearenophyceae    |Stramenopiles  |                          1|                396|
 |Bicosoecida         |Stramenopiles  |                        165|                374|
-|Blastocystis        |Stramenopiles  |                         45|                379|
 |Bolidophyceae       |Stramenopiles  |                         34|                382|
 |Cantina             |Stramenopiles  |                          1|                378|
 |Chrysomerophyceae   |Stramenopiles  |                          4|                388|
-|Chrysophyceae       |Stramenopiles  |                        299|                383|
+|Chrysophyceae       |Stramenopiles  |                        262|                383|
 |Developea           |Stramenopiles  |                          6|                386|
-|Diatomeae           |Stramenopiles  |                        822|                381|
+|Diatomea            |Stramenopiles  |                        822|                381|
 |Dictyochophyceae    |Stramenopiles  |                         93|                389|
 |Eustigmatales       |Stramenopiles  |                         20|                387|
 |Hyphochytriales     |Stramenopiles  |                          5|                389|
-|InSedStramenopiles  |Stramenopiles  |                        134|                386|
+|InSedStramenopiles  |Stramenopiles  |                        137|                386|
 |Labyrinthulomycetes |Stramenopiles  |                        414|                384|
 |MAST-1              |Stramenopiles  |                         28|                382|
 |MAST-10             |Stramenopiles  |                          2|                380|
@@ -245,7 +307,7 @@ Here is a summary table with the taxonomic groups contained in *eukaryotesV4* da
 |MOCH-3              |Stramenopiles  |                          2|                388|
 |MOCH-4              |Stramenopiles  |                          3|                388|
 |MOCH-5              |Stramenopiles  |                          7|                383|
-|Opalinata           |Stramenopiles  |                          4|                396|
+|Opalinata           |Stramenopiles  |                         49|                379|
 |Pelagophyceae       |Stramenopiles  |                         34|                384|
 |Peronosporomycetes  |Stramenopiles  |                        104|                392|
 |Phaeophyceae        |Stramenopiles  |                         24|                394|
@@ -256,4 +318,6 @@ Here is a summary table with the taxonomic groups contained in *eukaryotesV4* da
 |Placidida           |Stramenopiles  |                          6|                390|
 |Raphidophyceae      |Stramenopiles  |                         10|                391|
 |Schizocladia        |Stramenopiles  |                          1|                390|
+|Synchromophyceae    |Stramenopiles  |                          4|                390|
+|Synurophyceae       |Stramenopiles  |                         30|                383|
 |Xanthophyceae       |Stramenopiles  |                         25|                393|

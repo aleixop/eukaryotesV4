@@ -6,29 +6,60 @@ author: "Aleix Obiol"
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 library(tidyverse)
-library(DECIPHER)
+library(Biostrings)
 ```
 
 ## Functions
 
+### Old
+
+```{r}
+# tax_to_fasta <- function(tax, filename, dada = FALSE){
+#   if (dada == FALSE){
+#     tax_reformat <- 
+#       tax %>%
+#       mutate(name = paste(OTU, Group, Supergroup, sep = '_'),
+#              name = paste0('>',name)) %>% 
+#       select(name, seq)
+#   } else {
+#     tax_reformat <- 
+#       tax %>%
+#       mutate(name = paste('>Eukaryota',Supergroup, Group, OTU, sep = ';')) %>% 
+#       select(name, seq)
+#   }
+# 
+#   do.call(rbind, lapply(seq(nrow(tax_reformat)), function(i) t(tax_reformat[i, ]))) %>% 
+#     as_tibble() %>% 
+#     write_tsv(filename, col_names = FALSE)
+# }
+```
+
+### Current
+
 ```{r}
 tax_to_fasta <- function(tax, filename, dada = FALSE){
+  
   if (dada == FALSE){
-    tax_reformat <- 
+    
+    df <- 
       tax %>%
-      mutate(name = paste(OTU, Group, Supergroup, sep = '_'),
-             name = paste0('>',name)) %>% 
-      select(name, seq)
+      mutate(name = paste(OTU, Group, Supergroup, sep = '_'))
+    
   } else {
-    tax_reformat <- 
+    
+    df <- 
       tax %>%
-      mutate(name = paste('>Eukaryota',Supergroup, Group, OTU, sep = ';')) %>% 
-      select(name, seq)
+      mutate(name = paste('Eukaryota',Supergroup, Group, OTU, sep = ';')) 
+      
   }
+  
+  fasta <- 
+    df %>% 
+    select(name, seq) %>% 
+    deframe() %>% 
+    DNAStringSet()
 
-  do.call(rbind, lapply(seq(nrow(tax_reformat)), function(i) t(tax_reformat[i, ]))) %>% 
-    as_tibble() %>% 
-    write_tsv(filename, col_names = FALSE)
+  writeXStringSet(x = fasta, filepath = filename,width=1e4)
 }
 
 summarizer <- function(tax){
@@ -175,6 +206,41 @@ eukv4_v6 <-
   bind_rows(changes_tax_to_add) %>% 
   arrange(Supergroup, Group)
 
+write_tsv(eukv4_v6, 'db/eukaryotesV4_tax_v6.txt')
+tax_to_fasta(eukv4_v6, 'db/eukaryotesV4_v6.fasta')
+tax_to_fasta(eukv4_v6, dada = T, 'db/eukaryotesV4_v6_dada2.fasta')
 
+summarizer(eukv4_v6)
+```
+
+## version 6 to 7
+
+```{r}
+eukv4_v6 <- read_tsv('db/old_versions/eukaryotesV4_tax_v6.txt')
+
+name_changes <- 
+  c(Blastocystis = 'Opalinata',
+    Diatomeae = 'Diatomea')
+
+eukv4_v7 <- 
+  eukv4_v6 %>% 
+  mutate(Group = case_when(Group %in% names(name_changes) ~ name_changes[Group],
+                           OTU %in% c("BMK7763", "BMK5345", "BMK5769") ~ 'InSedStramenopiles',
+                           OTU %in% c("SLVKF443034", "SLVAJ130893", 
+                                        "SLVKF925343", "SLVJN004145") ~ 'Synchromophyceae',
+                           OTU %in% c("SLVU73225", "BMK10049", "SLVJN991181", "SLVU73226", "SLVJX946340", "SLVU73219", "SLVU73231", "SLVGU935621", "SLVU73222", "SLVHF549063", "SLVGU935623", "SLVGU935633", "SLVEF165118", "SLVGU935624", "SLVGU935628", "SLVU73221", "SLVGU935622", "SLVJX946336", "SLVGU325513", "SLVHF549067", "SLVHF549064", "SLVGU325515", "SLVGU067831", "SLVAB749074", "SLVJX455151", "SLVAB622324", "SLVHF549070", "SLVKM590553", "SLVAY919713", "SLVAY919803") ~ 'Synurophyceae',
+                           OTU %in% c("SLVGAIN01011745", "SLVAJ420694", 
+                                      "SLVAJ420692", "SLVHF952607", "SLVAM901023") ~ 'Nucleomorph',
+                           OTU == 'MPN3330' ~ 'InSedArchaeplastida',
+                           TRUE ~ Group),
+         Supergroup = if_else(Group == 'Nucleomorph','OtherEukaryota',Supergroup),
+         seq = str_replace_all(seq,'U','T'),
+         seq = toupper(seq))   
+
+write_tsv(eukv4_v7, 'db/eukaryotesV4_tax_v7.txt')
+tax_to_fasta(tax = eukv4_v7, filename = 'db/eukaryotesV4_v7.fasta')
+tax_to_fasta(tax = eukv4_v7, dada = T, filename = 'db/eukaryotesV4_v7_dada2.fasta')
+
+summarizer(eukv4_v7)
 ```
 
