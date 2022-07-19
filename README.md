@@ -4,8 +4,8 @@
 
 *eukaryotesV4* is a curated database of V4 region of 18S rDNA. It was built to extract and taxonomically classify short metagenomic reads (mTags).  
 
-You can download it in [fasta](db/eukaryotesV4_v6.fasta) format or [.txt file](db/eukaryotesV4_tax_v6.txt) with additional information.
-A version with headers formatted to work with `dada2` is also available [here](db/eukaryotesV4_v6_dada2.fasta).
+You can download it in [fasta](db/eukaryotesV4_v7.fasta) format or [.txt file](db/eukaryotesV4_tax_v7.txt) with additional information.
+A version with headers formatted to work with `dada2` is also available [here](db/eukaryotesV4_v7_dada2.fasta).
 
 ## Citation
 
