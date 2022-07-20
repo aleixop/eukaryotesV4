@@ -69,6 +69,12 @@ Changes in tax assignation, nomenclature. Additionaly, all U's in sequences chan
 |SLVHF952607     |Nucleomorph |
 |SLVAM901023     |Nucleomorph |
 
+#### Change Other-Chlorophyta to InSedArchaeplastida
+
+|OTU         |New tax            |
+|:-----------|:------------------|
+|MPN3330     |InSedArchaeplastida|
+
 #### Changes in taxonomic groups nomenclature
 
 |Old          |New       |
