@@ -15,7 +15,7 @@ Obiol, A., Giner, C.R., Sánchez, P., Duarte, C.M., Acinas, S.G. and Massana, R.
 
 ### v7
 
-Changes in tax assignation, nomenclature. Additionaly, all U's in sequences changed to T's for consistency.
+Changes in tax assignation and nomenclature. Additionaly, all U's in sequences changed to T's for consistency.
 
 #### Changes in Chrysophyceae
 
