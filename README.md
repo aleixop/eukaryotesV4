@@ -220,10 +220,9 @@ Here is a summary table with the taxonomic groups contained in *eukaryotesV4* da
 |Chlorophyceae       |Archaeplastida |                        156|                378|
 |Chloropicophyceae   |Archaeplastida |                         18|                376|
 |Glaucophyta         |Archaeplastida |                          5|                383|
-|InSedArchaeplastida |Archaeplastida |                        121|                379|
+|InSedArchaeplastida |Archaeplastida |                        122|                379|
 |Mamiellophyceae     |Archaeplastida |                        100|                377|
 |Nephroselmis        |Archaeplastida |                         17|                381|
-|Other-Chlorophyta   |Archaeplastida |                          1|                380|
 |Palmophyllophyceae  |Archaeplastida |                         19|                378|
 |Pedinophyceae       |Archaeplastida |                          7|                374|
 |Picocystophyceae    |Archaeplastida |                          1|                381|
