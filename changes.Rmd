@@ -244,3 +244,43 @@ tax_to_fasta(tax = eukv4_v7, dada = T, filename = 'db/eukaryotesV4_v7_dada2.fast
 summarizer(eukv4_v7)
 ```
 
+## version 7 to 8
+
+```{r}
+eukv4_v7 <- read_tsv('db/old_versions/eukaryotesV4_tax_v7.txt')
+
+name_changes <- 
+  read_tsv('db/old_versions/namechanges_v7_to_v8.txt') %>% 
+  deframe()
+  
+seqs_to_remove <- 
+  read_tsv('db/old_versions/remove_v7_to_v8.txt', col_names = 'name')
+
+seqs_to_add <- 
+  read_tsv('db/old_versions/addseqs_v7_to_v8.txt') %>% 
+  mutate(pident = as.character(pident))
+
+pr2_tax_to_add <- 
+  read_tsv('db/old_versions/addpr2_v7_to_v8.txt')
+
+eukv4_v8 <- 
+  eukv4_v7 %>% 
+  unite(OTU, Group, Supergroup, col = 'name') %>% 
+  filter(!name %in% seqs_to_remove$name) %>% 
+  mutate(name = case_when(name %in% names(name_changes) ~ name_changes[name],
+                          TRUE ~ name),
+         name = str_remove(name, '^SLV')) %>% # remove 'SLV' prefix to maintain original accession numbers
+  separate(name, sep = '_', into = c('OTU','Group','Supergroup')) %>% 
+  bind_rows(seqs_to_add) %>% 
+  arrange(Supergroup, Group, OTU) %>% 
+  left_join(pr2_tax_to_add) %>% 
+  mutate(Supergroup = case_when(Group %in% c('Diplonemea','Euglenida','Heterolobosea','Jakobida','Kinetoplastea') ~ 'Discoba',
+                                Group %in% c('Fornicata','Parabasalia','Preaxostyla') ~ 'Metamonada',
+                                Group %in% c('Ancyromonadida','Apusomonadida','Breviatea','Malawimonadidae') ~ 'DeepBranching',
+                                Group == 'Telonemia' ~ 'Telonemia',
+                                TRUE ~ Supergroup))
+  
+write_tsv(eukv4_v8, 'db/eukaryotesV4_tax_v8.txt')
+tax_to_fasta(tax = eukv4_v8, filename = 'db/eukaryotesV4_v8.fasta')
+tax_to_fasta(tax = eukv4_v8, dada = T, filename = 'db/eukaryotesV4_v8_dada2.fasta')
+```

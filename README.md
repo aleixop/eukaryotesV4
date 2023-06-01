@@ -4,14 +4,190 @@
 
 *eukaryotesV4* is a curated database of V4 region of 18S rDNA. It was built to extract and taxonomically classify short metagenomic reads (mTags).  
 
-You can download it in [fasta](db/eukaryotesV4_v7.fasta) format or [.txt file](db/eukaryotesV4_tax_v7.txt) with additional information.
-A version with headers formatted to work with `dada2` is also available [here](db/eukaryotesV4_v7_dada2.fasta).
+You can download it in [fasta](db/eukaryotesV4_v8.fasta) format or [.txt file](db/eukaryotesV4_tax_v8.txt) with additional information.
+A version with headers formatted to work with `dada2` is also available [here](db/eukaryotesV4_v8_dada2.fasta).
 
 ## Citation
 
 Obiol, A., Giner, C.R., Sánchez, P., Duarte, C.M., Acinas, S.G. and Massana, R. [A metagenomic assessment of microbial eukaryotic diversity in the global ocean](https://doi.org/10.1111/1755-0998.13147). *Mol Ecol Resour*. 2020; 20: 718– 731. doi: 10.1111/1755-0998.13147
 
+## Overview of the database
+
+Here is a summary table with the taxonomic groups contained in *eukaryotesV4* database.
+
+|Group                  |Supergroup     | OTU<sub>97</sub> sequences| Median length (bp)|
+|:----------------------|:--------------|--------------------------:|------------------:|
+|Apicomplexa            |Alveolata      |                        598|                369|
+|Ciliophora             |Alveolata      |                       1975|                369|
+|Colpodellida           |Alveolata      |                         50|                378|
+|Colponemida            |Alveolata      |                          8|                378|
+|Dinoflagellata         |Alveolata      |                       1355|                378|
+|Ellobiopsidae          |Alveolata      |                          9|                363|
+|InSedAlveolata         |Alveolata      |                         81|                375|
+|MALV-I                 |Alveolata      |                        599|                378|
+|MALV-II                |Alveolata      |                       2298|                378|
+|MALV-III               |Alveolata      |                         80|                380|
+|MALV-IV                |Alveolata      |                         47|                381|
+|MALV-V                 |Alveolata      |                         13|                376|
+|Perkinsidae            |Alveolata      |                        203|                379|
+|Archamoebea            |Amoebozoa      |                          9|                385|
+|Cavosteliida           |Amoebozoa      |                          8|                386|
+|Dictyostelia           |Amoebozoa      |                          8|                417|
+|Discosea               |Amoebozoa      |                        151|                492|
+|Fractovitellida        |Amoebozoa      |                          3|                382|
+|Gracilipodida          |Amoebozoa      |                         17|                389|
+|InSedAmoebozoa         |Amoebozoa      |                         36|                351|
+|Myxogastria            |Amoebozoa      |                         84|                436|
+|Protosporangiida       |Amoebozoa      |                          5|                421|
+|Protosteliida          |Amoebozoa      |                         20|                378|
+|Schizoplasmodiidae     |Amoebozoa      |                         13|                392|
+|Tubulinea              |Amoebozoa      |                         88|                388|
+|Variosea               |Amoebozoa      |                          2|                418|
+|Chlorodendrophyceae    |Archaeplastida |                          8|                380|
+|Chlorophyceae          |Archaeplastida |                        156|                378|
+|Chloropicophyceae      |Archaeplastida |                         17|                377|
+|Glaucophyta            |Archaeplastida |                          5|                383|
+|InSedArchaeplastida    |Archaeplastida |                        116|                379|
+|Mamiellophyceae        |Archaeplastida |                        100|                377|
+|Nephroselmis           |Archaeplastida |                         17|                381|
+|Palmophyllophyceae     |Archaeplastida |                         19|                378|
+|Pedinophyceae          |Archaeplastida |                          7|                374|
+|Picocystophyceae       |Archaeplastida |                          1|                381|
+|Picozoa                |Archaeplastida |                         30|                378|
+|Prasino-Clade-IX       |Archaeplastida |                          8|                372|
+|Pycnococcaceae         |Archaeplastida |                          3|                381|
+|Pyramimonadales        |Archaeplastida |                         45|                379|
+|Rhodophyceae           |Archaeplastida |                        387|                378|
+|Streptophyta           |Archaeplastida |                        730|                380|
+|Trebouxiophyceae       |Archaeplastida |                         81|                380|
+|Ulvophyceae            |Archaeplastida |                         79|                378|
+|Mantamonas             |CRuMS          |                          2|                385|
+|Rigifilida             |CRuMS          |                          6|                388|
+|Cryptomonadales        |Cryptista      |                        100|                376|
+|Cyathomonadacea        |Cryptista      |                          4|                420|
+|Kathablepharidacea     |Cryptista      |                         21|                377|
+|Palpitomonas           |Cryptista      |                          1|                375|
+|Ancyromonadida         |DeepBranching  |                         40|                380|
+|Apusomonadida          |DeepBranching  |                        132|                382|
+|Breviatea              |DeepBranching  |                         25|                380|
+|Malawimonadidae        |DeepBranching  |                          1|                386|
+|Diplonemea             |Discoba        |                         55|                538|
+|Euglenida              |Discoba        |                        193|                633|
+|Heterolobosea          |Discoba        |                         24|                486|
+|InSedDiscoba           |Discoba        |                          1|                368|
+|Jakobida               |Discoba        |                         17|                406|
+|Kinetoplastea          |Discoba        |                        219|                534|
+|Centroplasthelida      |Haptista       |                        160|                393|
+|Pavlovales             |Haptista       |                         25|                380|
+|Prymnesiophyceae       |Haptista       |                         63|                380|
+|Fornicata              |Metamonada     |                         14|                360|
+|Parabasalia            |Metamonada     |                        159|                267|
+|Preaxostyla            |Metamonada     |                         11|                390|
+|Aphelidiomycota        |Opisthokonta   |                         34|                379|
+|Ascomycota             |Opisthokonta   |                        598|                379|
+|BasalFungi             |Opisthokonta   |                         20|                382|
+|Basidiobolomycota      |Opisthokonta   |                          2|                386|
+|Basidiomycota          |Opisthokonta   |                        410|                380|
+|Blastocladiomycota     |Opisthokonta   |                          8|                404|
+|Calcarisporiellomycota |Opisthokonta   |                          3|                378|
+|Choanoflagellata       |Opisthokonta   |                        239|                378|
+|Chytridiomycota        |Opisthokonta   |                        183|                381|
+|Entomophthoromycota    |Opisthokonta   |                         26|                424|
+|Entorrhyzomycota       |Opisthokonta   |                          2|                382|
+|Filasterea             |Opisthokonta   |                          2|                382|
+|Glomeromycota          |Opisthokonta   |                         94|                381|
+|Ichthyosporea          |Opisthokonta   |                         47|                378|
+|InSedOpisthokonta      |Opisthokonta   |                         24|                380|
+|Kickxellomycota        |Opisthokonta   |                          1|                339|
+|MarineOpisthokonts     |Opisthokonta   |                         26|                377|
+|Metazoa                |Opisthokonta   |                       7209|                394|
+|Monoblepharomycota     |Opisthokonta   |                          7|                380|
+|Mortierellomycota      |Opisthokonta   |                          5|                385|
+|Mucoromycota           |Opisthokonta   |                         75|                388|
+|NCLC1                  |Opisthokonta   |                         10|                380|
+|Neocallimastigomycota  |Opisthokonta   |                          3|                381|
+|Olpidiomycota          |Opisthokonta   |                          4|                382|
+|Rotosphaerida          |Opisthokonta   |                         67|                380|
+|Rozellomycota          |Opisthokonta   |                        120|                368|
+|Zoopagomycota          |Opisthokonta   |                         66|                416|
+|InSedEukaryota         |OtherEukaryota |                        386|                372|
+|Nucleomorph            |OtherEukaryota |                         29|                387|
+|Acantharea             |Rhizaria       |                        432|                368|
+|Cercozoa               |Rhizaria       |                       1439|                390|
+|Chlorarachnea          |Rhizaria       |                         54|                385|
+|Foraminifera           |Rhizaria       |                         15|                713|
+|InSedRhizaria          |Rhizaria       |                         34|                389|
+|Polycystinea           |Rhizaria       |                        318|                382|
+|RAD-A                  |Rhizaria       |                         64|                386|
+|RAD-B                  |Rhizaria       |                         66|                384|
+|RAD-C                  |Rhizaria       |                         28|                378|
+|Aurearenophyceae       |Stramenopiles  |                          1|                396|
+|Bicosoecida            |Stramenopiles  |                        169|                374|
+|Bolidophyceae          |Stramenopiles  |                         34|                382|
+|Cantina                |Stramenopiles  |                          1|                377|
+|Chrysomerophyceae      |Stramenopiles  |                          4|                388|
+|Chrysophyceae          |Stramenopiles  |                        262|                383|
+|Developea              |Stramenopiles  |                          6|                386|
+|Diatomea               |Stramenopiles  |                        822|                381|
+|Dictyochophyceae       |Stramenopiles  |                         93|                389|
+|Eustigmatales          |Stramenopiles  |                         20|                387|
+|Hyphochytriales        |Stramenopiles  |                          5|                389|
+|InSedStramenopiles     |Stramenopiles  |                        134|                386|
+|Labyrinthulomycetes    |Stramenopiles  |                        411|                384|
+|MAST-1                 |Stramenopiles  |                         28|                382|
+|MAST-10                |Stramenopiles  |                          2|                380|
+|MAST-11                |Stramenopiles  |                          3|                380|
+|MAST-12                |Stramenopiles  |                         65|                386|
+|MAST-16                |Stramenopiles  |                          1|                389|
+|MAST-2                 |Stramenopiles  |                          4|                381|
+|MAST-20                |Stramenopiles  |                          2|                380|
+|MAST-22                |Stramenopiles  |                          8|                386|
+|MAST-23                |Stramenopiles  |                          2|                388|
+|MAST-24                |Stramenopiles  |                          2|                386|
+|MAST-25                |Stramenopiles  |                          5|                376|
+|MAST-3                 |Stramenopiles  |                        170|                383|
+|MAST-4                 |Stramenopiles  |                          5|                380|
+|MAST-6                 |Stramenopiles  |                         17|                386|
+|MAST-7                 |Stramenopiles  |                         19|                377|
+|MAST-8                 |Stramenopiles  |                         26|                386|
+|MAST-9                 |Stramenopiles  |                         36|                379|
+|MOCH-1                 |Stramenopiles  |                         21|                385|
+|MOCH-2                 |Stramenopiles  |                         33|                383|
+|MOCH-3                 |Stramenopiles  |                          2|                388|
+|MOCH-4                 |Stramenopiles  |                          3|                388|
+|MOCH-5                 |Stramenopiles  |                          7|                383|
+|Opalinata              |Stramenopiles  |                         49|                379|
+|Pelagophyceae          |Stramenopiles  |                         33|                385|
+|Peronosporomycetes     |Stramenopiles  |                        103|                392|
+|Phaeophyceae           |Stramenopiles  |                         24|                394|
+|Phaeothamniophyceae    |Stramenopiles  |                          3|                388|
+|Picophagus             |Stramenopiles  |                          3|                387|
+|Pinguiophyceae         |Stramenopiles  |                          8|                389|
+|Pirsoniales            |Stramenopiles  |                         21|                388|
+|Placidida              |Stramenopiles  |                          6|                390|
+|Raphidophyceae         |Stramenopiles  |                         10|                391|
+|Schizocladia           |Stramenopiles  |                          1|                390|
+|Synchromophyceae       |Stramenopiles  |                          4|                390|
+|Synurophyceae          |Stramenopiles  |                         30|                383|
+|Xanthophyceae          |Stramenopiles  |                         26|                392|
+|Telonemia              |Telonemia      |                         31|                375|
+
 ## Versions
+
+### v8
+
+Several sequences discarded, complete reclassification of Fungi and other sequences.
+
+Detailed changes:
+
+    - Removed 77 sequences with clear errors. Discarded sequences can be found [here](db/old_versions/remove_v7_to_v8.txt).
+    - Changed taxonomy in 912 sequences, especially within Fungi (now completely reclassified, BasalFungi group no longer used)). Table with name changes can be found [here](db/old_versions/namechanges_v7_to_v8.txt).
+    - One Fungi sequence added, [AY635841](db/old_versions/addseqs_v7_to_v8.txt).
+    - Added information in the tax file with closest match to [pr2 database](https://pr2-database.org/).
+    - Removed 'SLV' prefix from all SILVA sequences to use the original accession number.
+    - Excavata no longer used, now separated into Discoba and Metamonada.
+    - Added Telonemia supergroup.
+    - Added DeepBranching supergroup (Ancyromonadida, Apusomonadida, Breviatea, and Malawimonadidae).
 
 ### v7
 
@@ -185,144 +361,3 @@ and correct problematic cases (i.e. distant references sequences retrieving the 
 The largest effort was the classification at the taxonomic group level, 
 which comprised 136 groups (see following section). The final *eukaryotesV4* database contains 25,849 sequences, 43% of which derive from environmental datasets.
 
-## Overview of the database
-
-Here is a summary table with the taxonomic groups contained in *eukaryotesV4* database.
-
-|Group               |Supergroup     | OTU<sub>97</sub> sequences| Median length (bp)|
-|:-------------------|:--------------|--------------------------:|------------------:|
-|Apicomplexa         |Alveolata      |                        615|                370|
-|Ciliophora          |Alveolata      |                       1975|                369|
-|Colpodellida        |Alveolata      |                         28|                378|
-|Colponemida         |Alveolata      |                          8|                378|
-|Dinoflagellata      |Alveolata      |                       1382|                378|
-|Ellobiopsidae       |Alveolata      |                          9|                363|
-|InSedAlveolata      |Alveolata      |                        137|                377|
-|MALV-I              |Alveolata      |                        605|                378|
-|MALV-II             |Alveolata      |                       2305|                378|
-|MALV-III            |Alveolata      |                         82|                380|
-|MALV-IV             |Alveolata      |                         47|                381|
-|MALV-V              |Alveolata      |                         14|                376|
-|Perkinsidae         |Alveolata      |                        150|                380|
-|Archamoebea         |Amoebozoa      |                          9|                385|
-|Cavosteliida        |Amoebozoa      |                          8|                386|
-|Dictyostelia        |Amoebozoa      |                          8|                417|
-|Discosea            |Amoebozoa      |                        152|                492|
-|Fractovitellida     |Amoebozoa      |                          3|                382|
-|Gracilipodida       |Amoebozoa      |                         17|                389|
-|InSedAmoebozoa      |Amoebozoa      |                         37|                351|
-|Myxogastria         |Amoebozoa      |                         84|                436|
-|Protosporangiida    |Amoebozoa      |                          5|                421|
-|Protosteliida       |Amoebozoa      |                         20|                378|
-|Schizoplasmodiidae  |Amoebozoa      |                         13|                392|
-|Tubulinea           |Amoebozoa      |                         87|                388|
-|Chlorodendrophyceae |Archaeplastida |                          8|                380|
-|Chlorophyceae       |Archaeplastida |                        156|                378|
-|Chloropicophyceae   |Archaeplastida |                         18|                376|
-|Glaucophyta         |Archaeplastida |                          5|                383|
-|InSedArchaeplastida |Archaeplastida |                        122|                379|
-|Mamiellophyceae     |Archaeplastida |                        100|                377|
-|Nephroselmis        |Archaeplastida |                         17|                381|
-|Palmophyllophyceae  |Archaeplastida |                         19|                378|
-|Pedinophyceae       |Archaeplastida |                          7|                374|
-|Picocystophyceae    |Archaeplastida |                          1|                381|
-|Picozoa             |Archaeplastida |                         31|                378|
-|Prasino-Clade-IX    |Archaeplastida |                          8|                372|
-|Pycnococcaceae      |Archaeplastida |                          3|                381|
-|Pyramimonadales     |Archaeplastida |                         45|                379|
-|Rhodophyceae        |Archaeplastida |                        388|                378|
-|Streptophyta        |Archaeplastida |                        730|                380|
-|Trebouxiophyceae    |Archaeplastida |                         81|                380|
-|Ulvophyceae         |Archaeplastida |                         79|                378|
-|Mantamonas          |CRuMS          |                          2|                385|
-|Rigifilida          |CRuMS          |                          6|                388|
-|Cryptomonadales     |Cryptista      |                        102|                376|
-|Cyathomonadacea     |Cryptista      |                          4|                420|
-|Kathablepharidacea  |Cryptista      |                         21|                377|
-|Palpitomonas        |Cryptista      |                          1|                375|
-|Diplonemea          |Excavata       |                         56|                538|
-|Euglenida           |Excavata       |                        194|                633|
-|Fornicata           |Excavata       |                         14|                360|
-|Heterolobosea       |Excavata       |                         24|                486|
-|Jakobida            |Excavata       |                         17|                406|
-|Kinetoplastea       |Excavata       |                        220|                534|
-|Parabasalia         |Excavata       |                        159|                267|
-|Preaxostyla         |Excavata       |                         11|                390|
-|Centroplasthelida   |Haptista       |                        159|                393|
-|Pavlovales          |Haptista       |                         25|                380|
-|Prymnesiophyceae    |Haptista       |                         63|                380|
-|Ascomycota          |Opisthokonta   |                        601|                379|
-|BasalFungi          |Opisthokonta   |                        705|                381|
-|Basidiomycota       |Opisthokonta   |                        414|                380|
-|Choanoflagellata    |Opisthokonta   |                        240|                378|
-|Filasterea          |Opisthokonta   |                          5|                381|
-|Ichthyosporea       |Opisthokonta   |                         47|                378|
-|InSedOpisthokonta   |Opisthokonta   |                         67|                381|
-|MarineOpisthokonts  |Opisthokonta   |                         27|                377|
-|Metazoa             |Opisthokonta   |                       7222|                394|
-|Rotosphaerida       |Opisthokonta   |                         40|                380|
-|Ancyromonadida      |OtherEukaryota |                         40|                380|
-|Apusomonadida       |OtherEukaryota |                        132|                382|
-|Breviatea           |OtherEukaryota |                         24|                380|
-|InSedEukaryota      |OtherEukaryota |                        324|                358|
-|Malawimonadidae     |OtherEukaryota |                          1|                386|
-|Nucleomorph         |OtherEukaryota |                         25|                388|
-|Telonemia           |OtherEukaryota |                         31|                375|
-|Acantharea          |Rhizaria       |                        434|                367|
-|Cercozoa            |Rhizaria       |                       1439|                390|
-|Chlorarachnea       |Rhizaria       |                         56|                384|
-|Foraminifera        |Rhizaria       |                         15|                713|
-|InSedRhizaria       |Rhizaria       |                         35|                389|
-|Polycystinea        |Rhizaria       |                        318|                382|
-|RAD-A               |Rhizaria       |                         64|                386|
-|RAD-B               |Rhizaria       |                         66|                384|
-|RAD-C               |Rhizaria       |                         28|                378|
-|Aurearenophyceae    |Stramenopiles  |                          1|                396|
-|Bicosoecida         |Stramenopiles  |                        165|                374|
-|Bolidophyceae       |Stramenopiles  |                         34|                382|
-|Cantina             |Stramenopiles  |                          1|                378|
-|Chrysomerophyceae   |Stramenopiles  |                          4|                388|
-|Chrysophyceae       |Stramenopiles  |                        262|                383|
-|Developea           |Stramenopiles  |                          6|                386|
-|Diatomea            |Stramenopiles  |                        822|                381|
-|Dictyochophyceae    |Stramenopiles  |                         93|                389|
-|Eustigmatales       |Stramenopiles  |                         20|                387|
-|Hyphochytriales     |Stramenopiles  |                          5|                389|
-|InSedStramenopiles  |Stramenopiles  |                        137|                386|
-|Labyrinthulomycetes |Stramenopiles  |                        414|                384|
-|MAST-1              |Stramenopiles  |                         28|                382|
-|MAST-10             |Stramenopiles  |                          2|                380|
-|MAST-11             |Stramenopiles  |                          3|                380|
-|MAST-12             |Stramenopiles  |                         65|                386|
-|MAST-16             |Stramenopiles  |                          1|                389|
-|MAST-2              |Stramenopiles  |                          4|                381|
-|MAST-20             |Stramenopiles  |                          2|                380|
-|MAST-22             |Stramenopiles  |                          8|                386|
-|MAST-23             |Stramenopiles  |                          2|                388|
-|MAST-24             |Stramenopiles  |                          2|                386|
-|MAST-25             |Stramenopiles  |                          5|                376|
-|MAST-3              |Stramenopiles  |                        170|                383|
-|MAST-4              |Stramenopiles  |                          5|                380|
-|MAST-6              |Stramenopiles  |                         17|                386|
-|MAST-7              |Stramenopiles  |                         19|                377|
-|MAST-8              |Stramenopiles  |                         26|                386|
-|MAST-9              |Stramenopiles  |                         36|                379|
-|MOCH-1              |Stramenopiles  |                         21|                385|
-|MOCH-2              |Stramenopiles  |                         33|                383|
-|MOCH-3              |Stramenopiles  |                          2|                388|
-|MOCH-4              |Stramenopiles  |                          3|                388|
-|MOCH-5              |Stramenopiles  |                          7|                383|
-|Opalinata           |Stramenopiles  |                         49|                379|
-|Pelagophyceae       |Stramenopiles  |                         34|                384|
-|Peronosporomycetes  |Stramenopiles  |                        104|                392|
-|Phaeophyceae        |Stramenopiles  |                         24|                394|
-|Phaeothamniophyceae |Stramenopiles  |                          3|                388|
-|Picophagus          |Stramenopiles  |                          3|                387|
-|Pinguiophyceae      |Stramenopiles  |                          8|                389|
-|Pirsoniales         |Stramenopiles  |                         21|                388|
-|Placidida           |Stramenopiles  |                          6|                390|
-|Raphidophyceae      |Stramenopiles  |                         10|                391|
-|Schizocladia        |Stramenopiles  |                          1|                390|
-|Synchromophyceae    |Stramenopiles  |                          4|                390|
-|Synurophyceae       |Stramenopiles  |                         30|                383|
-|Xanthophyceae       |Stramenopiles  |                         25|                393|
