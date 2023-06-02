@@ -181,7 +181,7 @@ Several sequences discarded, complete reclassification of Fungi and other sequen
 Detailed changes:
 
   - Removed 77 sequences with clear errors. Discarded sequences can be found [here](db/old_versions/remove_v7_to_v8.txt).
-  - Changed taxonomy in 912 sequences, especially within Fungi (now completely reclassified, BasalFungi group no longer used)). Table with name changes can be found [here](db/old_versions/namechanges_v7_to_v8.txt).
+  - Changed taxonomy in 912 sequences, especially within BasalFungi. Table with name changes can be found [here](db/old_versions/namechanges_v7_to_v8.txt).
   - One Fungi sequence added, [AY635841](db/old_versions/addseqs_v7_to_v8.txt).
   - Added information in the tax file with closest match to [pr2 database](https://pr2-database.org/).
   - Removed 'SLV' prefix from all SILVA sequences to use the original accession number.
