@@ -273,7 +273,7 @@ eukv4_v8 <-
   separate(name, sep = '_', into = c('OTU','Group','Supergroup')) %>% 
   bind_rows(seqs_to_add) %>% 
   arrange(Supergroup, Group, OTU) %>% 
-  left_join(pr2_tax_to_add) %>% 
+  left_join(pr2_tax_to_add) %>%
   mutate(Supergroup = case_when(Group %in% c('Diplonemea','Euglenida','Heterolobosea','Jakobida','Kinetoplastea') ~ 'Discoba',
                                 Group %in% c('Fornicata','Parabasalia','Preaxostyla') ~ 'Metamonada',
                                 Group %in% c('Ancyromonadida','Apusomonadida','Breviatea','Malawimonadidae') ~ 'DeepBranching',
@@ -283,4 +283,6 @@ eukv4_v8 <-
 write_tsv(eukv4_v8, 'db/eukaryotesV4_tax_v8.txt')
 tax_to_fasta(tax = eukv4_v8, filename = 'db/eukaryotesV4_v8.fasta')
 tax_to_fasta(tax = eukv4_v8, dada = T, filename = 'db/eukaryotesV4_v8_dada2.fasta')
+
+summarizer(eukv4_v8)
 ```
