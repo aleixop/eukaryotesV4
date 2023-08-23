@@ -86,21 +86,20 @@ Here is a summary table with the taxonomic groups contained in *eukaryotesV4* da
 |Aphelidiomycota        |Opisthokonta   |                         34|                379|
 |Ascomycota             |Opisthokonta   |                        598|                379|
 |BasalFungi             |Opisthokonta   |                         20|                382|
-|Basidiobolomycota      |Opisthokonta   |                          2|                386|
+|Basidiobolomycota      |Opisthokonta   |                          3|                383|
 |Basidiomycota          |Opisthokonta   |                        410|                380|
 |Blastocladiomycota     |Opisthokonta   |                          8|                404|
 |Calcarisporiellomycota |Opisthokonta   |                          3|                378|
 |Choanoflagellata       |Opisthokonta   |                        239|                378|
 |Chytridiomycota        |Opisthokonta   |                        183|                381|
-|Entomophthoromycota    |Opisthokonta   |                         26|                424|
 |Entorrhyzomycota       |Opisthokonta   |                          2|                382|
 |Filasterea             |Opisthokonta   |                          2|                382|
 |Glomeromycota          |Opisthokonta   |                         94|                381|
 |Ichthyosporea          |Opisthokonta   |                         47|                378|
 |InSedOpisthokonta      |Opisthokonta   |                         24|                380|
-|Kickxellomycota        |Opisthokonta   |                          1|                339|
 |MarineOpisthokonts     |Opisthokonta   |                         26|                377|
 |Metazoa                |Opisthokonta   |                       7209|                394|
+|Microsporidia          |Opisthokonta   |                        152|                213|
 |Monoblepharomycota     |Opisthokonta   |                          7|                380|
 |Mortierellomycota      |Opisthokonta   |                          5|                385|
 |Mucoromycota           |Opisthokonta   |                         75|                388|
@@ -109,7 +108,7 @@ Here is a summary table with the taxonomic groups contained in *eukaryotesV4* da
 |Olpidiomycota          |Opisthokonta   |                          4|                382|
 |Rotosphaerida          |Opisthokonta   |                         67|                380|
 |Rozellomycota          |Opisthokonta   |                        120|                368|
-|Zoopagomycota          |Opisthokonta   |                         66|                416|
+|Zoopagomyceta          |Opisthokonta   |                         93|                420|
 |InSedEukaryota         |OtherEukaryota |                        386|                372|
 |Nucleomorph            |OtherEukaryota |                         29|                387|
 |Acantharea             |Rhizaria       |                        432|                368|
@@ -181,9 +180,9 @@ Several sequences discarded, complete reclassification of Fungi and other sequen
 Detailed changes:
 
   - Removed 77 sequences with clear errors. Discarded sequences can be found [here](db/old_versions/remove_v7_to_v8.txt).
-  - Changed taxonomy in 912 sequences, especially within BasalFungi. Table with name changes can be found [here](db/old_versions/namechanges_v7_to_v8.txt).
-  - One Fungi sequence added, [AY635841](db/old_versions/addseqs_v7_to_v8.txt).
-  - Added information in the tax file with closest match to [pr2 database](https://pr2-database.org/).
+  - Changed taxonomy in 913 sequences, especially within BasalFungi. Table with name changes can be found [here](db/old_versions/namechanges_v7_to_v8.txt).
+  - 154 Fungi sequences added: 2 Basidiobolomycota and 152 Microsporidia. Added sequences can be found [here](db/old_versions/addseqs_v7_to_v8.txt).
+  - Added information in the tax file with closest match to [pr2 database](https://pr2-database.org/) version 5.0.0.
   - Removed 'SLV' prefix from all SILVA sequences to use the original accession number.
   - Excavata no longer used, now separated into Discoba and Metamonada.
   - Added Telonemia supergroup.
