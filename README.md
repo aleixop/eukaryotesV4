@@ -107,7 +107,7 @@ Here is a summary table with the taxonomic groups contained in *eukaryotesV4* da
 |Neocallimastigomycota  |Opisthokonta   |                          3|                381|
 |Olpidiomycota          |Opisthokonta   |                          4|                382|
 |Rotosphaerida          |Opisthokonta   |                         67|                380|
-|Rozellomycota          |Opisthokonta   |                        120|                368|
+|Rozellomycota          |Opisthokonta   |                        119|                368|
 |Zoopagomyceta          |Opisthokonta   |                         93|                420|
 |InSedEukaryota         |OtherEukaryota |                        386|                372|
 |Nucleomorph            |OtherEukaryota |                         29|                387|
@@ -181,7 +181,7 @@ Detailed changes:
 
   - Removed 77 sequences with clear errors. Discarded sequences can be found [here](db/old_versions/remove_v7_to_v8.txt).
   - Changed taxonomy in 913 sequences, especially within BasalFungi. Table with name changes can be found [here](db/old_versions/namechanges_v7_to_v8.txt).
-  - 154 Fungi sequences added: 2 Basidiobolomycota and 152 Microsporidia. Added sequences can be found [here](db/old_versions/addseqs_v7_to_v8.txt).
+  - 153 Fungi sequences added: 2 Basidiobolomycota and 151 Microsporidia. Added sequences can be found [here](db/old_versions/addseqs_v7_to_v8.txt).
   - Added information in the tax file with closest match to [pr2 database](https://pr2-database.org/) version 5.0.0.
   - Removed 'SLV' prefix from all SILVA sequences to use the original accession number.
   - Excavata no longer used, now separated into Discoba and Metamonada.
